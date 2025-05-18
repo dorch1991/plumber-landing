@@ -1,49 +1,188 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ש.ע עבודות אחזקה</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #005c99, #3399ff);
+      color: #fff;
+    }
 
-Skip to content
-Using Gmail with screen readers
-Conversations
-31% of 15 GB used
-Terms · Privacy · Program Policies
-Last account activity: 0 minutes ago
-Details
-<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; direction: rtl; text-align: right; background-color: #f9f9f9; border-radius: 10px;">
-  <img src="https://files.oaiusercontent.com/file-3mcLdhSuoZpnp9yNLuqjix?se=2025-05-19T17%3A00%3A00Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/jpeg&skoid=&sktid=&skt=2025-05-18T17%3A00%3A00Z&ske=2025-05-19T17%3A00%3A00Z&sks=b&skv=2021-08-06&sig=4X8CfaF6j7p9OtqJhUWRgmOMqqXqspI5LZfV8B6i5XY%3D" alt="ש.ע עבודות אחזקה" style="max-width: 150px; margin-bottom: 20px;">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
 
-  <h2 style="color: #1a1a1a;">ש.ע עבודות אחזקה – אינסטלטור אמין וזמין במרכז</h2>
+    .container {
+      max-width: 850px;
+      width: 100%;
+    }
 
-  <h3 style="color: #007bff;">נזילה? סתימה? פיצוץ בצנרת? אני בדרך אליך!</h3>
-  <p>שירותי אינסטלציה מקצועיים עם אחריות מלאה – זמינות מהירה, מחירים הוגנים, ושירות מכל הלב.</p>
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-  <h4>למה לבחור בנו?</h4>
-  <ul>
-    <li>זמינים גם בוואטסאפ לנוחות מקסימלית</li>
-    <li>יחס אישי ואדיב</li>
-    <li>מעל 10 שנות ניסיון</li>
-    <li>שירות מהיר, מקצועי וללא פשרות</li>
-    <li>מחירים שקופים בלי הפתעות</li>
-  </ul>
+    .logo img {
+      max-width: 150px;
+    }
 
-  <h4>השירותים שלנו:</h4>
-  <ul>
-    <li>פתיחת סתימות</li>
-    <li>תיקון פיצוצים ונזילות</li>
-    <li>החלפת ברזים ואסלות</li>
-    <li>התקנת נקודות מים למכונות כביסה/מדיח</li>
-    <li>עבודות אינסטלציה כלליות</li>
-  </ul>
+    h1 {
+      font-size: 54px;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-  <h4>לקוחות ממליצים:</h4>
-  <p><strong>"התקשרתי בלילה בגלל פיצוץ – הגיע תוך חצי שעה ופתר הכול במהירות. שירות מדהים!"</strong><br>– רונית, פתח תקווה</p>
-  <p><strong>"סוף סוף אינסטלטור שאפשר לסמוך עליו. אמין, מקצועי, והמחיר הוגן."</strong><br>– גיל, רמת גן</p>
+    h2 {
+      font-size: 24px;
+      color: #e0f0ff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-  <h4>זמין עכשיו באזור המרכז:</h4>
-  <p>תל אביב | רמת גן | גבעתיים | פתח תקווה | קרית אונו | אור יהודה | יהוד</p>
+    .contact-buttons {
+      text-align: center;
+      margin-bottom: 35px;
+    }
 
-  <div style="margin-top: 20px;">
-    <a href="tel:0526669844" style="display: inline-block; background-color: #28a745; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none;">התקשר עכשיו</a>
-    <a href="https://wa.me/972526669844" style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; margin-right: 10px;">שלח הודעה בוואטסאפ</a>
+    .contact-buttons a {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+      color: #fff;
+    }
+
+    .call-btn {
+      background-color: #0066cc;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+
+    .call-btn:hover,
+    .whatsapp-btn:hover {
+      opacity: 0.9;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding-right: 0;
+    }
+
+    ul li {
+      padding-right: 28px;
+      position: relative;
+      margin-bottom: 14px;
+      font-size: 17px;
+      color: #e6f2ff;
+    }
+
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      right: 0;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.15);
+      border-right: 6px solid #ffffff;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      font-style: italic;
+      color: #ffffff;
+    }
+
+    p {
+      color: #dbeeff;
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="logo.jpg" alt="לוגו ש.ע עבודות אחזקה" />
+    </div>
+
+    <h1>ש.ע עבודות אחזקה</h1>
+    <h2>אינסטלטור מקצועי, זמין, ועם שירות מעל המצופה</h2>
+
+    <div class="contact-buttons">
+      <a class="call-btn" href="tel:0500000000">התקשר עכשיו</a>
+      <a class="whatsapp-btn" href="https://wa.me/972500000000">שלח הודעה בוואטסאפ</a>
+    </div>
+
+    <p>
+      מחפש פתרון מהיר, אמין ומקצועי לבעיות אינסטלציה? הגעת למקום הנכון!
+      <br>
+      <span style="color:#ffffff; font-weight:bold;">שירות אישי, זמין ובמחיר הוגן.</span>
+    </p>
+
+    <p class="section-title">למה לבחור בנו?</p>
+    <ul>
+      <li>שירות מיידי גם בוואטסאפ</li>
+      <li>יחס אישי ואדיב</li>
+      <li>מעל 10 שנות ניסיון בשטח</li>
+      <li>מחירים שקופים וללא הפתעות</li>
+      <li>לקוחות קבועים וממליצים</li>
+    </ul>
+
+    <p class="section-title">השירותים שלנו:</p>
+    <ul>
+      <li>פתיחת סתימות וניקוי קווים</li>
+      <li>תיקון פיצוצי צנרת ונזילות</li>
+      <li>התקנת ברזים, אסלות ומקלחות</li>
+      <li>נקודות מים למדיחים ומכונות כביסה</li>
+      <li>תחזוקה שוטפת לבתים פרטיים</li>
+    </ul>
+
+    <p class="section-title">לקוחות מרוצים מספרים:</p>
+    <div class="testimonial">
+      "התקשרתי בלילה בגלל פיצוץ – הגיע תוך חצי שעה ופתר הכול. שירות מדהים ואכפתי!"<br />
+      – רונית, פתח תקווה
+    </div>
+    <div class="testimonial">
+      "פשוט תענוג לעבוד עם מישהו כל כך מקצועי ואמין. המחיר היה הוגן והשירות מהיר!"<br />
+      – גיל, רמת גן
+    </div>
+
+    <p class="section-title">איזורי פעילות:</p>
+    <p>תל אביב, רמת גן, גבעתיים, פתח תקווה, קרית אונו, אור יהודה, יהוד והסביבה.</p>
   </div>
-</div>
-עידן index.txt
-Displaying עידן index.txt.
+
+</body>
+</html>
